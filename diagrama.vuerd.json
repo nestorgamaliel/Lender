@@ -17,9 +17,9 @@
       "columnNotNull": true,
       "relationship": true
     },
-    "database": "MySQL",
-    "databaseName": "",
-    "canvasType": "ERD",
+    "database": "PostgreSQL",
+    "databaseName": "Lender",
+    "canvasType": "@vuerd/builtin-sql-ddl",
     "language": "GraphQL",
     "tableCase": "pascalCase",
     "columnCase": "camelCase",
@@ -117,6 +117,29 @@
             }
           },
           {
+            "id": "92c18b12-1817-4c5b-972b-6ef27f658912",
+            "name": "Documents_types_id",
+            "comment": "",
+            "dataType": "INTEGER",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": true,
+              "pfk": false,
+              "widthName": 123.39892578125,
+              "widthComment": 60,
+              "widthDataType": 60,
+              "widthDefault": 60
+            }
+          },
+          {
             "id": "8d0f0d00-e17c-4105-a749-961b8b61faba",
             "name": "Document_number",
             "comment": "",
@@ -163,25 +186,25 @@
             }
           },
           {
-            "id": "92c18b12-1817-4c5b-972b-6ef27f658912",
-            "name": "Documents_types_id",
+            "id": "64cf7a73-25a8-4e8b-a1ed-f9e2a26f20c4",
+            "name": "Workplace",
             "comment": "",
-            "dataType": "INTEGER",
+            "dataType": "Varchar(80)",
             "default": "",
             "option": {
               "autoIncrement": false,
               "primaryKey": false,
               "unique": false,
-              "notNull": true
+              "notNull": false
             },
             "ui": {
               "active": false,
               "pk": false,
-              "fk": true,
+              "fk": false,
               "pfk": false,
-              "widthName": 123.39892578125,
+              "widthName": 63.17236328125,
               "widthComment": 60,
-              "widthDataType": 60,
+              "widthDataType": 69.67236328125,
               "widthDefault": 60
             }
           }
@@ -190,7 +213,7 @@
           "active": false,
           "left": 128,
           "top": 197,
-          "zIndex": 6,
+          "zIndex": 18,
           "widthName": 60,
           "widthComment": 60
         },
@@ -249,10 +272,10 @@
           }
         ],
         "ui": {
-          "active": true,
+          "active": false,
           "left": 679,
           "top": 83,
-          "zIndex": 7,
+          "zIndex": 2,
           "widthName": 106.05078125,
           "widthComment": 60
         },
@@ -286,7 +309,7 @@
             "92c18b12-1817-4c5b-972b-6ef27f658912"
           ],
           "x": 566.11767578125,
-          "y": 293,
+          "y": 303.25,
           "direction": "right"
         },
         "constraintName": "fk_documents_types_to_partners",
